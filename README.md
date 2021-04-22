@@ -4,10 +4,10 @@
     一边执行渲染方法.render()重新渲染，就可以实现立方体的旋转效果。为了实现周期性渲染可以通过浏览器全局对象window对象的一个  
     方法setInterval(),可以通过window对象调用该方法window.setInterval()，也可以直接以函数形式调用setInterval()。
  `JavaScript`  
- `` function render() {
+ `` function render(){
     renderer.render(scene,camera);//执行渲染操作
     mesh.rotateY(0.01);//每次绕y轴旋转0.01弧度
-} ``
+} 
   上面代码定义了一个渲染函数render()，函数中定义了三个语句，通过setInterval("render()",20);可以实现m每间隔20毫秒调用一次函数render()，每次调用渲染函数的时候，执行renderer.render(scene,camera);渲染出一帧图像，执行mesh.rotateY(0.01);语句使立方体网格模型绕y轴旋转0.01弧度。
   requestAnimationFrame()参数是将要被调用函数的函数名，requestAnimationFrame()调用一个函数不是立即调用而是向浏览器发起一个执行某函数的请求， 什么时候会执行由浏览器决定，一般默认保持60FPS的频率，大约每16.7ms调用一次requestAnimationFrame()方法指定的函数，60FPS是理想的情况下，如果渲染的场景比较复杂或者说硬件性能有限可能会低于这个频率
   `javascript`
