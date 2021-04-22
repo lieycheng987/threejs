@@ -1,5 +1,44 @@
 <template>
-    <div id="star" ref="star"></div>
+    <div id="star" ref="star">
+        <div class="login-div">
+            <div class="row">
+                <div class="logo"></div>
+            </div>
+            <div class="row-center-align">
+                <h3>登录</h3>
+                <h5>使用官方账号进行登录</h5>
+            </div>
+            <div class="row">
+                <div class="input-field-col1">
+                    <label for="email_input">电子邮箱</label>
+                    <input id="email_input" type="email" class="validate" 
+                    placeholder="请输入电子邮箱">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field-col2">
+                    <label for="password_input">登录密码</label>
+                    <input id="password_input" type="password" class="validate" placeholder="请输入登录密码">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">关于账号注册、修改密码问题 
+                    <a href="#">
+                        <b>了解更多</b>
+                    </a>
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <div class="col-s6"><a href="#">创建账户</a></div>
+                <div class="col-s6-right-align">
+                    <button >
+                        <img class="loginx" src="../assets/img/微信图片_20210422170243.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 <script>
 import *as Three from "three"
@@ -138,5 +177,45 @@ export default {
 <style lang="scss" scoped>
 #star{
     height: 100vh;
+}
+.login-div {
+  max-width: 430px;
+  padding: 35px ;
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  text-align:left;
+}
+.logo {
+  background-image: url("../assets/img/Logo.png");
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  margin:0 auto;
+}
+.row-center-align{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.input-field-col1 ,.input-field-col2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.input-field-col1 input,.input-field-col2 input{
+    height: 30px;
+}
+.col-s6{
+    text-align: center;
+    padding-top:15px;
+}
+.col-s6-right-align{
+    text-align: center;
+    padding-top: 15px;
+}
+.loginx{
+    width: 60px;
 }
 </style>
